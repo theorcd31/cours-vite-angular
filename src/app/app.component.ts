@@ -7,7 +7,7 @@ import { HomeComponent } from "./home/home.component";
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavigationComponent, FooterComponent, HomeComponent],
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html', 
   styleUrl: './app.component.css'
 })
 export class AppComponent {
