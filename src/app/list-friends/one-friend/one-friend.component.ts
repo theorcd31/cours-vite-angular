@@ -13,6 +13,7 @@ export class OneFriendComponent {
   oneFriendStatus:string = 'Offline';
   oneFriendBio:string = "Slt à tous les amis je suis un dictateur mais je me bave dessus quand je me rends dans des institutions comme le Real Madrid";
   oneFriendXss:string = "<script>alert('Hello, XSS')</script>";
+  oneFriendImage:string = "https://picsum.photos/200"
 
   getOneFriendStatus() {
     return this.oneFriendStatus;
