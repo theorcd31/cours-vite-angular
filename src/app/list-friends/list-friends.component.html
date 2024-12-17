@@ -1,10 +1,18 @@
-<div class="flex flex-col">
+<div class="flex flex-col items-center">
     <h1>Bienvenue sur la liste d'amis !</h1>
-    <button [disabled]="listFriendsAuth" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-auto max-w-28 text-xs">
+    <button (click)="onAddingFriends()" [disabled]="listFriendsAuth" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-auto max-w-28 text-xs">
         Ajouter ami
     </button>
-    <div>
+    <div class="mb-4">
         <app-one-friend></app-one-friend>
     </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+          Nom ami :
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" [(ngModel)]="listFriendsInputText" placeholder="Nom Ami">
+      </div>
+    <p> {{ listFriendsCreationStatus }} </p>
+    <p> {{ listFriendsInputText }} </p>
 </div>
 

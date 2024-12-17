@@ -1,0 +1,11 @@
+<h1>TP - DataBinding</h1>
+<div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Nom utilisateur :
+    </label>
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" [(ngModel)]="username" placeholder="Nom utilisateur">
+    <p> {{ username }} </p>
+    <button [disabled]="!username" (click)="resetInput()" class="disabled:bg-red-100 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-auto max-w-28 text-xs">
+        Reset Input
+    </button>
+</div>
