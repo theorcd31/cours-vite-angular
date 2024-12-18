@@ -10,13 +10,14 @@
         Ajouter ami
     </button>
     <div *ngIf="listFriendCreated; else friendNotCreated" >Un ami a été créé, il s'agit de {{ listFriendsInputText }} ! </div>
+    <p *ngFor="let item of ['truc','bidule','machin','superman']; let i=index">L'index de la boucle for : {{i}} - azertyuiop</p>
     <ng-template #friendNotCreated>
       <p>Ajoutez un ami !</p>
     </ng-template>
-    <div class="mb-4">
+    <div class="mb-4" *ngFor="let friends of listFriendsTab">
         <app-one-friend></app-one-friend>
     </div>
-    
+    <p [ngStyle]="{color: maCouleur}">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, reprehenderit recusandae eos deleniti distinctio, modi, autem amet laudantium soluta ex fuga. Quod earum debitis itaque, nam sapiente incidunt quam at.</p>
     
 </div>
 

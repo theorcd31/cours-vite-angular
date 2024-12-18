@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-one-friend',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './one-friend.component.html',
   styleUrl: './one-friend.component.css'
 })
@@ -17,5 +18,16 @@ export class OneFriendComponent {
 
   getOneFriendStatus() {
     return this.oneFriendStatus;
+  }
+  constructor(){
+    this.oneFriendStatus = Math.random() < 0.5 ? 'OFF' : 'ON';
+  }
+
+  getColor(){
+    if (this.oneFriendStatus == 'OFF') {
+      return 'red'
+    } else {
+      return 'purple'
+    }
   }
 }
