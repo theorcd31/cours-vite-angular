@@ -1,0 +1,36 @@
+<div class="flex flex-col border-2 rounded p-4 bg-red-300 gap-4">
+    <h2 class="font-bold">Add-Article</h2>
+    <p>Ajoutez un article ou un brouillon !</p>
+    <div>
+        <label for="">Titre de l'article :</label>
+        <input
+            type="text"
+            id="table-search-users"
+            class="w-[80rem] block py-1 ps-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+            focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+            dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            [(ngModel)]="titre"
+        />
+    </div>
+    <div class="">
+        <label for="">Contenu de l'article :</label>
+        <textarea
+            type="text"
+            id="table-search-users"
+            class="w-[80rem] block py-1 ps-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+            focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+            dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            [(ngModel)]="contenu"
+        >
+        </textarea>
+    </div>
+    <div class="flex flex-row gap-1">
+        <button (click)="addArticle()" class="disabled:bg-red-100 bg-gray-950 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded w-auto max-w-36 text-xs">
+            Ajouter article
+        </button>
+        <button class="disabled:bg-red-100 bg-transparent border border-gray-950 hover:bg-gray-200 text-dark font-bold py-2 px-4 rounded w-auto max-w-36 text-xs">
+            Ajouter brouillon
+        </button>
+    </div>
+    
+</div>

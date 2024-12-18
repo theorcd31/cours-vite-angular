@@ -1,0 +1,7 @@
+<div class="flex flex-col items-center">
+    <h1 class="mb-8">Blog Control Center</h1>
+    <div class="flex flex-col gap-8 w-11/12">
+            <app-add-article (articleAdded)="onAddedArticle($event)"></app-add-article>
+            <app-article-element *ngFor="let article of articles" [titre]="article.titre" [contenu]="article.contenu"></app-article-element>
+    </div>
+</div>
