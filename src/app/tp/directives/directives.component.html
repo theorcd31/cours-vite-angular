@@ -1,0 +1,17 @@
+<h1 class="font-bold">TP - Directives</h1>
+<button *ngIf="detailsIsActive;else detailsNotActive" (click)="details()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-auto max-w-28 text-xs">
+    Masquer détails
+</button>
+<p [ngStyle]="{ display: detailsIsActive ? 'block' : 'none' }">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae hic nisi eaque inventore atque 
+    eius quae non corrupti quasi voluptatum ut, accusamus aperiam similique nemo tenetur blanditiis! Rem, inventoreiste!
+</p>
+<ul>
+    <li *ngFor="let item of tab" [ngStyle]="{backgroundColor: item >= 5 ? 'blue':'' }" [ngClass]="{'text-white': item >= 5}">{{ item }}</li>
+</ul>
+
+<ng-template #detailsNotActive>
+    <button (click)="details()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-auto max-w-28 text-xs">
+        Afficher détails
+    </button>
+</ng-template>
