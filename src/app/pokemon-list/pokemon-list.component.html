@@ -1,0 +1,14 @@
+<h1>Pokémon List</h1>
+<div *ngIf="isLoading">Chargement...</div>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+<div *ngFor="let pokemon of pokemons">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" [src]="pokemon.image" [alt]="pokemon.name">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ pokemon.name }}</div>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ pokemon.id }}</span>
+        </div>
+      </div>
+</div>

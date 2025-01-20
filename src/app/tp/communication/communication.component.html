@@ -1,0 +1,26 @@
+<div id="communication" class="container-fluid bg-green-200">
+    <h1 class="text-center ">TP - Component communication</h1>
+    <p>Affichage des données :</p>
+    <div class="p-4">
+        <app-active-user [user]="user"></app-active-user>
+    </div>
+
+    <p>Formulaire de modification :</p>
+    <div>
+        <app-user-data (userCreated)="handleUserUpdated($event)"></app-user-data>
+    </div>
+    
+    <!-- Composant d'ajout d'article -->
+    <!-- <app-add-article
+      (articleCreated)="onArticleAdded($event)"
+      (brouillonCreated)="onBrouillonAdded($event)"
+    ></app-add-article> -->
+  
+    <!-- Liste des articles -->
+    <div class="row mt-4">
+      <!-- <app-article-element
+        *ngFor="let articleItem of articles"
+        [oneArticle]="articleItem">
+      </app-article-element> -->
+    </div>
+  </div>
