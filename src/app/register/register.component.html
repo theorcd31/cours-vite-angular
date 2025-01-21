@@ -1,0 +1,22 @@
+<div class="container mx-auto mt-5">
+    <h1 class="text-2xl font-bold mb-4">Inscription avec Email et Mot de Passe</h1>
+
+    <div>
+      <input [(ngModel)]="email" type="email" placeholder="Email" class="form-control mb-3 border border-gray-300 rounded-md p-2 mb-3 w-full" />
+      <input [(ngModel)]="password" type="password" placeholder="Mot de passe" class="form-control mb-3 border border-gray-300 rounded-md p-2 mb-3 w-full" />
+
+      <button (click)="signUp()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">S'inscrire</button>
+    </div>
+
+    <div *ngIf="user" class="mt-4">
+      <p>Utilisateur inscrit: {{ user.email }}</p>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger mt-3 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+      <p>{{ error }}</p>
+    </div>
+
+    <a routerLink="/app-login" class="text-blue-500 hover:text-blue-800">
+      Déjà inscrit? Connectez-vous ici.
+    </a>
+</div>
