@@ -15,6 +15,7 @@ export const routes: Routes = [
   { path: 'app-profil-details/:id', loadComponent: () => import('./profil-details/profil-details.component').then(m => m.ProfilDetailsComponent) },
   { path: 'app-communication', loadComponent: () => import('./tp/communication/communication.component').then(m => m.CommunicationComponent) },
   { path: 'app-observable', loadComponent: () => import('./tp/observable/observable.component').then(m => m.ObservableComponent) },
+  { path: 'app-pipes', loadComponent: () => import('./pipes/pipes.component').then(m => m.PipesComponent) },
   { path: '**', loadComponent: () => import('./shared/not-found/not-found.component').then(m => m.NotFoundComponent) },
   
   

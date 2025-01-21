@@ -1,0 +1,60 @@
+<div class="container mx-auto mt-5">
+    <h1 class="text-center text-blue-500">Leçon : Les Pipes en Angular</h1>
+    <p class="text-gray-500">Les pipes permettent de transformer les données dans les templates Angular de manière simple et réutilisable.</p>
+  
+    <!-- Section : Pipes intégrés -->
+    <section class="mb-4">
+      <h3 class="text-green-500">1. Les Pipes intégrés</h3>
+      <p>Voici quelques exemples des pipes intégrés les plus courants :</p>
+      <ul class="list-none">
+        <li class="bg-white border border-gray-300 rounded-md p-2 mb-2">
+          <strong>Date :</strong> {{ currentDate | date:'fullDate' }}
+          <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 ml-2">Exemple : {{ currentDate }}</span>
+        </li>
+        <li class="bg-white border border-gray-300 rounded-md p-2 mb-2">
+          <strong>Uppercase :</strong> {{ exampleText | uppercase }}
+          <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 ml-2">Exemple : {{ exampleText }}</span>
+        </li>
+        <li class="bg-white border border-gray-300 rounded-md p-2 mb-2">
+          <strong>Currency :</strong> {{ productPrice | currency:'EUR':'symbol' }}
+          <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 ml-2">Exemple : {{ productPrice }}</span>
+        </li>
+        <li class="bg-white border border-gray-300 rounded-md p-2 mb-2">
+          <strong>Decimal :</strong> {{ decimalValue | number:'1.2-2' }}
+          <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 ml-2">Exemple : {{ decimalValue }}</span>
+        </li>
+        <li class="bg-white border border-gray-300 rounded-md p-2 mb-2">
+          <strong>JSON :</strong>
+          <pre class="bg-gray-100 p-2 rounded-md">{{ jsonData | json }}</pre>
+        </li>
+      </ul>
+    </section>
+    <h2>Exercices</h2>
+    <section class="mb-4">
+        <h3 class="text-green-500">2. Les Pipes personnalisées</h3>
+        <ul class="list-none">
+            <li class="bg-white border border-gray-300 rounded-md p-2 mb-2 flex flex-col">
+                <strong>Texte original :</strong> {{ exampleText }}
+                <strong>Texte inversé :</strong> {{ exampleText | reverseText }}
+            </li>
+        </ul>
+    </section>
+    <section class="mb-4">
+        <h3 class="text-green-500">3. Exercices interactif</h3>
+        <div class="flex flex-col gap-2 bg-stone-400 p-4">
+            <label for="text">Texte :</label>
+            <input type="text" id="text" [(ngModel)]="theText" class="border border-gray-300 rounded-md p-2 mb-2">
+
+            <label for="text">Prix :</label>
+            <input type="number" id="number" [(ngModel)]="productPrice" class="border border-gray-300 rounded-md p-2 mb-2">
+        </div>
+        <ul class="list-none">
+            <li class="bg-white border border-gray-300 rounded-md p-2 mb-2 flex flex-col">
+                <strong>Texte original :</strong> {{ theText }}
+                <strong>Texte en majuscules :</strong> {{ theText | uppercase }}
+                <strong>Texte en minuscules :</strong> {{ theText | reverseText }}
+                <strong>Prix :</strong> {{ productPrice | currency:'EUR':'symbol' }}
+            </li>
+        </ul>
+    </section>
+</div>

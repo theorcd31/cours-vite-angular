@@ -12,7 +12,7 @@ export class OneFriendComponent {
   oneFriendName:string = 'Kylian Mbâclé';
   oneFriendAge:number = 26;
   oneFriendStatus:string = 'Offline';
-  oneFriendBio:string = "Slt à tous les amis je suis un dictateur mais je me bave dessus quand je me rends dans des institutions comme le Real Madrid";
+  oneFriendBio:string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc";
   oneFriendXss:string = "<script>alert('Hello, XSS')</script>";
   oneFriendImage:string = "https://picsum.photos/200"
 
