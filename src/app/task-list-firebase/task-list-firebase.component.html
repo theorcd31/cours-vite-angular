@@ -1,0 +1,26 @@
+<div class="container mx-auto mt-5 p-4">
+    <h2 class="text-2xl font-bold mb-4">Liste des tâches</h2>
+    <form (ngSubmit)="addTask()" class="flex mb-4">
+      <input
+        [(ngModel)]="newTask.title"
+        name="task"
+        type="text"
+        placeholder="Nouvelle tâche"
+        class="flex-grow p-2 border border-gray-300 rounded mr-2"
+      />
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Ajouter</button>
+    </form>
+  
+    <ul class="list-none">
+      <li *ngFor="let task of tasks" class="p-2 border-b border-gray-300 flex justify-between">
+        {{ task.title }}
+        <span 
+        [ngClass]="{'bg-green-500 text-white': task.status === 'completed', 'bg-yellow-300 text-white bold': task.status !== 'completed'}"
+        class="rounded-full py-1 px-2">
+        {{ task.status }}
+        </span>
+        <button type="submit" (click)="updateTaskStatus(task)" class="bg-blue-500 text-white px-4 py-2 rounded">Changer status</button>
+        <button type="submit" (click)="deleteTask(task)" class="bg-red-500 text-white px-4 py-2 rounded">Supprimer</button>
+      </li>
+    </ul>
+  </div>
