@@ -1,0 +1,28 @@
+<div class="container mx-auto mt-5 p-4 gap-4">
+    <h1 class="text-3xl font-bold text-blue-300 mb-4">Suivi des tâches</h1>
+    <div class="flex flex-col gap-1 container shadow-2xl p-4 w-[50rem] mb-4">
+        <h2 class="text-2xl font-bold mb-4">Ajouter une tâche</h2>
+        <form action="" class="flex flex-col gap-1 mb-4">
+            <input type="text" [(ngModel)]="newTask().title" class="flex-grow p-2 border border-gray-300 rounded mr-2" name="task" placeholder="Nouvelle tâche" />
+            <select [(ngModel)]="newTask().priority" id="menu" name="menu" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">
+                <option value="" disabled selected>Priorité</option>
+                <option value="haute">Haute</option>
+                <option value="moyenne">Moyenne</option>
+                <option value="basse">Basse</option>
+            </select>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="addTask()">Ajouter</button>
+        </form>
+    </div>
+    <div class="flex flex-col gap-1 container p-4 w-[50rem] mb-4">
+        <h2 class="text-2xl font-bold mb-4">Liste des tâches</h2>
+        <hr>
+        <ul class="list-none">
+            <li *ngFor="let task of tasksList()" [ngClass]="task.complete == true ? 'text-green-400' : 'text-black'" class="p-2 border-b border-gray-300 flex justify-between">
+                {{ task.title }}
+                <span class="rounded-full py-1 px-2">{{ task.priority }}</span>
+                <button type="submit"  class="bg-blue-500 text-white px-4 py-2 rounded" (click)="toggleComplete(task)"> Marquer comme complète </button>
+                <button type="submit"  class="bg-red-500 text-white px-4 py-2 rounded" (click)="deleteTask(task)" >Supprimer</button>
+            </li>
+          </ul>
+    </div>
+</div>

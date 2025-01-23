@@ -23,6 +23,7 @@ export const routes: Routes = [
   { path: 'app-profile-user', canActivate: [AuthGuardService], loadComponent: () => import('./profile-user/profile-user.component').then(m => m.ProfileUserComponent) },
   { path: 'app-signals', canActivate: [AuthGuardService], loadComponent: () => import('./signals/signals.component').then(m => m.SignalsComponent) },
   { path: 'app-task-list-firebase', canActivate: [AuthGuardService], loadComponent: () => import('./task-list-firebase/task-list-firebase.component').then(m => m.TaskListFirebaseComponent) },
+  { path: 'app-task-manager', canActivate: [AuthGuardService], loadComponent: () => import('./task-manager/task-manager.component').then(m => m.TaskManagerComponent) },
   { path: '**', loadComponent: () => import('./shared/not-found/not-found.component').then(m => m.NotFoundComponent) },
   
   
